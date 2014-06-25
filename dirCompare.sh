@@ -1,8 +1,10 @@
 #!/bin/bash
 
+TARGET_DIR=$1
+
 for file in *; 
 do 
-	chkFile="/Users/rob/ws/ehr-ipad/$file"
+	chkFile="$TARGET_DIR/$file"
 	if [ ! -e $chkFile ]
 	then
 		echo "$chkFile does not exist" 
