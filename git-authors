@@ -1,6 +1,0 @@
-#!/bin/sh
-#
-# Display a line for each author who has at least one blame attribution along
-# with the number of attributions.
-
-git blame --line-porcelain $1 | sed -n 's/^author //p' | sort | uniq -c | sort -rn
